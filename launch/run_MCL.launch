@@ -3,8 +3,8 @@
     <arg name="method" default="PCL_FSD_UNK" />
     <arg name="mapName" default="alma" />
 
-    <arg name="datasetType" default="multi_cam" />
-    <!-- <arg name="datasetType" default="single_cam" /> -->
+    <!-- <arg name="datasetType" default="multi_cam" /> -->
+    <arg name="datasetType" default="single_cam" />
 
    <!-- ### Data ### -->
     <include file="$(find robotathome_at_ros)/launch/run_$(arg datasetType)_data.launch">

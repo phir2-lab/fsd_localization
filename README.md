@@ -43,7 +43,7 @@ The **default** option is `alma`. Other options are `anto`, `pare`, `rx2`. All t
     - `LRaycast`: scan matching using the 2D laser readings;
     - `Motion`: No observation model - only removing particles that go over obstacles or outside the map
 
-- `datasetType`: There are two option: `multi_cam` (**default**) or `single_cam`. The first option uses the 4 RGB-D cameras of the Robot@Home dataset, and the second uses only the frontal RGB-D camera.
+- `datasetType`: There are two option: `multi_cam` or `single_cam` (**default**). The first option uses the 4 RGB-D cameras of the Robot@Home dataset, and the second uses only the frontal RGB-D camera.
 
 Ex:  
     `rosrun fsd_localization fsd_localization _mapName:="anto" _method:="ABS_PCL_FSD"`
