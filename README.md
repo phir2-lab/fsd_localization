@@ -1,6 +1,6 @@
 # FSD Localization package
 
-This package implements the Monte Carlo Localization technique using Free-Space Density (FSD) as observation model, as proposed by [Renan Maffei](http://www.inf.ufrgs.br/~rqmaffei/) et al. (LINK_AQUI)
+This package implements the Monte Carlo Localization technique using Free-Space Density (FSD) as observation model, as proposed by [Renan Maffei](http://www.inf.ufrgs.br/~rqmaffei/) et al. [[1]](#1)
 
 ## 1. Installation 
 
@@ -32,13 +32,13 @@ The program can be executed as follows
 
 Parameters:
 - `mapName`: The program loads a 2d grid map (in .txt format). The map should be located in the 'maps' folder within the package.   
-This work was developed using data from the [Robot@home dataset](http://mapir.isa.uma.es/mapirwebsite/index.php/mapir-downloads/203-robot-at-home-dataset.htmlurl), converted to the ROS format using the **robotathome_at_ros** package, available at (LINK AQUI).  
+This work was developed using data from the [Robot@home dataset](http://mapir.isa.uma.es/mapirwebsite/index.php/mapir-downloads/203-robot-at-home-dataset.htmlurl), converted to the ROS format using the **robotathome_at_ros** package, available at https://github.com/phir2-lab/robotathome_at_ros.  
 The **default** option is `alma`. Other options are `anto`, `pare`, `rx2`. All these maps are contained in the 'maps' folder.
 
 - `method`: Different particle weighting strategies are implemented in the [MCL.cpp](src/MCL.cpp) file, and their use can be selected with this parameter. 
     - `ABS_PCL_FSD`: **Absolute FSD** - Free-Space Density using depth information obtained by RGB-D cameras;
     - `INT_PCL_FSD` (**default**): **Interval FSD** - An Interval-based extension of the previous approach that computes the Free-Space Density using not only the known free-space, but also the possible free-space in unknown regions;
-    - `CLikelihood`: scan matching between K random measurements from the point cloud, analyzing beam endpoints using a likelihood map, as used in [[1]](#1)
+    - `CLikelihood`: scan matching between K random measurements from the point cloud, analyzing beam endpoints using a likelihood map, as used in [[2]](#2)
     - `CRaycast`: similar to the previous method, but performing raycasting to obtain more precise results;
     - `LRaycast`: scan matching using the 2D laser readings;
     - `Motion`: No observation model - only removing particles that go over obstacles or outside the map
@@ -50,7 +50,7 @@ Ex:
 
 ## 3. Running everything together with a launch file
 
-In the 'launch' folder is available a launch file to simultaneously run the program, the RViz viewer and bagfiles with data from the **Robot@home dataset** converted to the ROS format using the **robotathome_at_ros** package.
+In the 'launch' folder is available a launch file to simultaneously run the program, the RViz viewer and bagfiles with data from the **Robot@home dataset** converted to the ROS format using the [**robotathome_at_ros**](https://github.com/phir2-lab/robotathome_at_ros) package.
 
 For proper operation, you need to install beforehand the **robotathome_at_ros** package in the same ROS workspace and generate the bagfiles following the instructions in LINK_AQUI.
 
@@ -74,7 +74,10 @@ Ex:
 
 
 ## References
-<a id="1">[1]</a> 
+
+<a id="1">[1]</a> Maffei, R. Q., Pittol, D., Mantelli, M., Prestes, E. Kolberg, M. Global Localization Over 2D Floor Plans with Free-Space Density Based on Depth Information. Accepted in: 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Las Vegas, USA. 2020. [(Accepted version)](http://www.inf.ufrgs.br/~rqmaffei/files/papers/Maffei2020_IROS.pdf)
+
+<a id="2">[2]</a> 
 W. Winterhalter, F. Fleckenstein, B. Steder, L. Spinello, and W. Burgard, 
 “Accurate indoor localization for rgb-d smartphones and tablets given 2d floor plans,” 
 in Proc. of IROS, 2015, pp. 3138–3143.
