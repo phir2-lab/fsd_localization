@@ -1,0 +1,5 @@
+*.o
+*~
+programa
+Sensors/*
+Imgs/*

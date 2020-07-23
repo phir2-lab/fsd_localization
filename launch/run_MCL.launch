@@ -1,0 +1,22 @@
+<launch>
+
+    <arg name="method" default="PCL_FSD_UNK" />
+    <arg name="mapName" default="alma" />
+
+    <arg name="datasetType" default="multi_cam" />
+    <!-- <arg name="datasetType" default="single_cam" /> -->
+
+   <!-- ### Data ### -->
+    <include file="$(find robotathome_at_ros)/launch/run_$(arg datasetType)_data.launch">
+        <arg name="dataset" value="$(arg mapName)-s1"/>
+    </include>
+
+    <!-- ### MCL ### -->
+    <!-- <node pkg="fsd_localization" type="fsd_localization" name="fsd_localization" output="screen"> -->
+    <node pkg="fsd_localization" type="fsd_localization" name="fsd_localization">
+        <param name="~mapName" type="string" value="$(arg mapName)"/>
+        <param name="~method" type="string" value="$(arg method)"/>
+        <param name="~datasetType" type="string" value="$(arg datasetType)"/>
+    </node>
+
+</launch>
