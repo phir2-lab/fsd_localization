@@ -52,7 +52,7 @@ Ex:
 
 In the 'launch' folder is available a launch file to simultaneously run the program, the RViz viewer and bagfiles with data from the **Robot@home dataset** converted to the ROS format using the [**robotathome_at_ros**](https://github.com/phir2-lab/robotathome_at_ros) package.
 
-For proper operation, you need to install beforehand the **robotathome_at_ros** package in the same ROS workspace and generate the bagfiles following the instructions in LINK_AQUI.
+For proper operation, you need to install beforehand the **robotathome_at_ros** package in the same ROS workspace and generate the bagfiles following the package [instructions](https://github.com/phir2-lab/robotathome_at_ros#readme).
 
 To run the launch file, type  
 `roslaunch fsd_localization run_MCL.launch`
