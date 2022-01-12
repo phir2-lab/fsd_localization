@@ -75,7 +75,7 @@ Ex:
 
 ## References
 
-<a id="1">[1]</a> Maffei, R. Q., Pittol, D., Mantelli, M., Prestes, E. Kolberg, M. Global Localization Over 2D Floor Plans with Free-Space Density Based on Depth Information. Accepted in: 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Las Vegas, USA. 2020. [(Accepted version)](http://www.inf.ufrgs.br/~rqmaffei/files/papers/Maffei2020_IROS.pdf)
+<a id="1">[1]</a> Maffei, R. Q., Pittol, D., Mantelli, M., Prestes, E. Kolberg, M. Global Localization Over 2D Floor Plans with Free-Space Density Based on Depth Information. Accepted in: 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Las Vegas, USA. 2020. [(Accepted version)](http://www.inf.ufrgs.br/~rqmaffei/files/papers/Maffei2020IROS.pdf)
 
 <a id="2">[2]</a> 
 W. Winterhalter, F. Fleckenstein, B. Steder, L. Spinello, and W. Burgard, 
